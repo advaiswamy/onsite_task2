@@ -1,0 +1,38 @@
+body{
+  background-color: #FEF2BF;
+  height: 100%;
+}
+
+input{
+  height: 40px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+#btn{
+  height: 40px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: #411f1f;
+  color: #FFFFFF;
+}
+
+.head{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 100px;
+  color: #411f1f;
+  display: block;
+  margin-bottom: 80px;
+}
+
+.cookie{
+  background-color: #FEF2BF;
+}
+
+.contents{
+  text-align: center;
+  margin-bottom: 30px;
+}
