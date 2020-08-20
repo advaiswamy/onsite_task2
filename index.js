@@ -2,14 +2,10 @@ var count_o = 0;
 var count_re = 0;
 var temp = 0;
 var total = 0;
-
-var o = new RegExp('o', 'gi');
-var re = new RegExp('re', 'gi');
-
 var result_re = new Array();
 
 document.getElementById('btn').addEventListener("click", function() {
-  temp = document.getElementById('str').value;
+  temp = document.getElementById('str').value.toLowerCase();
   count_o = (temp.match(/o/g) || []).length;
   count_re = (temp.match(/re/g) || []).length;
   total = count_o + count_re
