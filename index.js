@@ -23,13 +23,19 @@ document.getElementById('btn').addEventListener("click", function() {
   });
 
   var img = 0;
-  var main = document.createElement('div');
+  var parent = document.createElement('div');
+  document.body.appendChild(parent);
+  parent.style.resize = "both";
+  parent.style.paddingBottom = "5px";
+  parent.style.overflow = "auto";
+  parent.style.width = "100px";
+  parent.style.display = "inline-block";
+  parent.style.position = "absolute";
 
-  document.body.appendChild(main);
-  main.style.width = "100px";
+  var main = document.createElement('div');
+  parent.appendChild(main);
+  main.style.width = "100%";
   main.style.display = "inline-block";
-  main.style.resize = "both";
-  main.style.overflow = "auto";
   main.classList.add("cookie");
 
   document.querySelectorAll(".cookie").forEach(div => {
@@ -45,9 +51,9 @@ document.getElementById('btn').addEventListener("click", function() {
     }
 
     function divMove(e){
-      div.style.position = 'absolute';
-      div.style.top = e.clientY + 'px';
-      div.style.left = e.clientX + 'px';
+      div.parentElement.style.position = 'absolute';
+      div.parentElement.style.top = e.clientY + 'px';
+      div.parentElement.style.left = e.clientX + 'px';
     }
 
   });
